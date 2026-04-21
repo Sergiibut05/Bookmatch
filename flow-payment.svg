@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1C1410"/>
+      <stop offset="100%" stop-color="#2A1F17"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1,1 L8,5 L1,9" fill="none" stroke="#C8956C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1,1 L8,5 L1,9" fill="none" stroke="#D4B896" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="url(#bg)" rx="12"/>
+  <rect width="900" height="200" fill="none" stroke="#6B4423" stroke-width="1" rx="12" opacity="0.25"/>
+
+  <!-- Title -->
+  <text x="450" y="26" font-family="Georgia,serif" font-size="12" font-weight="600"
+    text-anchor="middle" fill="#E8C9A0" letter-spacing="3" opacity="0.9">FLUJO DE PAGO — STRIPE CHECKOUT</text>
+  <line x1="200" y1="34" x2="700" y2="34" stroke="#6B4423" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ── Node 1: USER ── -->
+  <rect x="15" y="52" width="120" height="72" rx="8" fill="#2A1F17" stroke="#A0785A" stroke-width="0.8"/>
+  <text x="75" y="78" font-family="'Segoe UI',sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#E8DCC8">👤 Usuario</text>
+  <text x="75" y="94" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">Clic "Comprar"</text>
+  <text x="75" y="106" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">en detalles libro</text>
+
+  <!-- Arrow 1 → -->
+  <line x1="135" y1="88" x2="196" y2="88" stroke="#A0785A" stroke-width="1.2" marker-end="url(#arr)" stroke-dasharray="4,3">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <text x="166" y="82" font-family="'Segoe UI',sans-serif" font-size="7" text-anchor="middle" fill="#C8956C" opacity="0.6">POST</text>
+
+  <!-- ── Node 2: BACKEND ── -->
+  <rect x="200" y="48" width="170" height="80" rx="8" fill="#2A1F17" stroke="#C8956C" stroke-width="0.8"/>
+  <text x="285" y="70" font-family="'Segoe UI',sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#E8C9A0">⚡ Backend</text>
+  <text x="285" y="86" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#E8C9A0" opacity="0.7">Crea Checkout Session</text>
+  <text x="285" y="100" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">nombre · precio · foto</text>
+  <text x="285" y="114" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">dirección de envío</text>
+
+  <!-- Arrow 2 → -->
+  <line x1="370" y1="88" x2="432" y2="88" stroke="#C8956C" stroke-width="1.2" marker-end="url(#arr)" stroke-dasharray="4,3">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <text x="401" y="82" font-family="'Segoe UI',sans-serif" font-size="7" text-anchor="middle" fill="#E8C9A0" opacity="0.6">redirect</text>
+
+  <!-- ── Node 3: STRIPE ── -->
+  <rect x="436" y="48" width="154" height="80" rx="8" fill="#2C1810" stroke="#C8956C" stroke-width="1.2"/>
+  <rect x="436" y="48" width="154" height="80" rx="8" fill="none" stroke="#E8C9A0" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0.4;0" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="513" y="70" font-family="'Segoe UI',sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#E8C9A0">💳 Stripe Checkout</text>
+  <text x="513" y="88" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#F5E6D0" opacity="0.8">Card · Link · PayPal</text>
+  <text x="513" y="102" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#F5E6D0" opacity="0.6">3D Secure · PCI compliant</text>
+  <text x="513" y="116" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#C8956C" opacity="0.6">modo test activo ✓</text>
+
+  <!-- Arrow 3 → -->
+  <line x1="590" y1="88" x2="652" y2="88" stroke="#D4B896" stroke-width="1.2" marker-end="url(#arr-g)" stroke-dasharray="4,3">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <text x="621" y="82" font-family="'Segoe UI',sans-serif" font-size="7" text-anchor="middle" fill="#D4B896" opacity="0.7">success</text>
+
+  <!-- ── Node 4: SUCCESS ── -->
+  <rect x="656" y="48" width="140" height="80" rx="8" fill="#2A1F17" stroke="#D4B896" stroke-width="0.8"/>
+  <text x="726" y="72" font-family="'Segoe UI',sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#F5E6D0">✅ Confirmación</text>
+  <text x="726" y="90" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#E8DCC8" opacity="0.7">Order creada en BD</text>
+  <text x="726" y="104" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#E8DCC8" opacity="0.7">Stock actualizado</text>
+  <text x="726" y="118" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">Página de éxito</text>
+
+  <!-- Green success pulse -->
+  <rect x="656" y="48" width="140" height="80" rx="8" fill="none" stroke="#D4B896" stroke-width="1.5" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="2s" repeatCount="indefinite" begin="2.5s"/>
+  </rect>
+
+  <!-- Animated ball along full path -->
+  <circle r="5" fill="#C8956C" opacity="0" filter="url(#glow)">
+    <animateMotion dur="5s" repeatCount="indefinite">
+      <mpath href="#full-path"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;1;1;0" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#C8956C;#C8956C;#C8956C;#D4B896;#D4B896" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <path id="full-path" d="M75,88 L285,88 L513,88 L726,88" fill="none"/>
+
+  <!-- Webhook row -->
+  <line x1="513" y1="128" x2="513" y2="152" stroke="#C8956C" stroke-width="0.8" opacity="0.35" stroke-dasharray="3,2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <rect x="400" y="155" width="226" height="28" rx="6" fill="#2C1810" stroke="#C8956C" stroke-width="0.5" opacity="0.5"/>
+  <text x="513" y="173" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#E8C9A0" opacity="0.65">🔔 Webhook — checkout.session.completed</text>
+
+  <!-- Deep link row -->
+  <line x1="726" y1="128" x2="726" y2="152" stroke="#D4B896" stroke-width="0.8" opacity="0.35" stroke-dasharray="3,2">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <rect x="656" y="155" width="140" height="28" rx="6" fill="#2A1F17" stroke="#D4B896" stroke-width="0.5" opacity="0.5"/>
+  <text x="726" y="173" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#F5E6D0" opacity="0.65">📱 bookmatch://payment</text>
+
+</svg>

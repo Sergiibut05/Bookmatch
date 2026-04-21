@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" width="1440" height="120" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="ft-wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#A0785A" stop-opacity="0.04"/>
+      <stop offset="50%"  stop-color="#C8956C" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#A0785A" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="ft-wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#D4B896" stop-opacity="0.02"/>
+      <stop offset="50%"  stop-color="#E8DCC8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#D4B896" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="ft-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C1410"/>
+      <stop offset="25%"  stop-color="#A0785A"/>
+      <stop offset="50%"  stop-color="#C8956C"/>
+      <stop offset="75%"  stop-color="#A0785A"/>
+      <stop offset="100%" stop-color="#1C1410"/>
+    </linearGradient>
+    <radialGradient id="ft-glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="#8B6F47" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1C1410" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient glow -->
+  <rect width="1440" height="120" fill="url(#ft-glow)">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Mountain wave 1 -->
+  <path fill="url(#ft-wave1)">
+    <animate attributeName="d" dur="10s" repeatCount="indefinite"
+      values="
+        M0,80 Q180,35 360,65 T720,45 T1080,70 T1440,50 L1440,120 L0,120 Z;
+        M0,60 Q180,75 360,40 T720,70 T1080,45 T1440,65 L1440,120 L0,120 Z;
+        M0,80 Q180,35 360,65 T720,45 T1080,70 T1440,50 L1440,120 L0,120 Z"/>
+  </path>
+
+  <!-- Mountain wave 2 -->
+  <path fill="url(#ft-wave2)">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite"
+      values="
+        M0,90 Q200,55 400,80 T800,60 T1200,85 T1440,65 L1440,120 L0,120 Z;
+        M0,70 Q200,85 400,58 T800,82 T1200,60 T1440,80 L1440,120 L0,120 Z;
+        M0,90 Q200,55 400,80 T800,60 T1200,85 T1440,65 L1440,120 L0,120 Z"/>
+  </path>
+
+  <!-- Foreground wave -->
+  <path fill="#1C1410" opacity="0.5">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite"
+      values="
+        M0,100 Q240,80 480,95 T960,85 T1440,95 L1440,120 L0,120 Z;
+        M0,92 Q240,100 480,82 T960,98 T1440,88 L1440,120 L0,120 Z;
+        M0,100 Q240,80 480,95 T960,85 T1440,95 L1440,120 L0,120 Z"/>
+  </path>
+
+  <!-- Horizon line -->
+  <line x1="0" y1="92" x2="1440" y2="92" stroke="url(#ft-line)" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Rising parchment page particles -->
+  <rect x="200" y="110" width="6" height="8" rx="1" fill="#E8DCC8" opacity="0">
+    <animate attributeName="y"       values="110;40;110"     dur="7s" begin="0s"   repeatCount="indefinite"/>
+    <animate attributeName="opacity"  values="0;0.35;0;0.18;0" dur="7s" begin="0s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 203 114;-20 203 75;0 203 114" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="600" y="115" width="5" height="7" rx="1" fill="#D4B896" opacity="0">
+    <animate attributeName="y"       values="115;35;115"     dur="9s" begin="2s"   repeatCount="indefinite"/>
+    <animate attributeName="opacity"  values="0;0.3;0;0.12;0" dur="9s" begin="2s"  repeatCount="indefinite"/>
+  </rect>
+  <rect x="1000" y="108" width="7" height="9" rx="1" fill="#F5E6D0" opacity="0">
+    <animate attributeName="y"       values="108;30;108"     dur="8s" begin="1s"   repeatCount="indefinite"/>
+    <animate attributeName="opacity"  values="0;0.25;0;0.1;0" dur="8s" begin="1s"  repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="5 1003 112;18 1003 70;5 1003 112" dur="8s" begin="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Warm stars -->
+  <circle cx="360" cy="50" r="1.2" fill="#E8DCC8" opacity="0">
+    <animate attributeName="opacity" values="0;0.5;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="38" r="1" fill="#C8956C" opacity="0">
+    <animate attributeName="opacity" values="0;0.4;0" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1100" cy="45" r="1.4" fill="#D4B896" opacity="0">
+    <animate attributeName="opacity" values="0;0.45;0" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom base -->
+  <rect x="0" y="116" width="1440" height="4" fill="#1C1410"/>
+</svg>

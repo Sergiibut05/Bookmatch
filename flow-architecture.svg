@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1C1410"/>
+      <stop offset="100%" stop-color="#2A1F17"/>
+    </linearGradient>
+    <linearGradient id="col-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C8956C" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C8956C" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="col-grad-amber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#D4B896" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#D4B896" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="arrow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#A0785A" stop-opacity="0.2"/>
+      <stop offset="50%"  stop-color="#C8956C" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#A0785A" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="arrow-cream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8B6F47" stop-opacity="0.2"/>
+      <stop offset="50%"  stop-color="#D4B896" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8B6F47" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1,1 L8,5 L1,9" fill="none" stroke="#C8956C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-cream" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1,1 L8,5 L1,9" fill="none" stroke="#D4B896" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="340" fill="url(#bg)" rx="12"/>
+  <rect width="900" height="340" fill="none" stroke="#6B4423" stroke-width="1" rx="12" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="450" y="32" font-family="Georgia,serif" font-size="13" font-weight="600"
+    text-anchor="middle" fill="#E8C9A0" letter-spacing="3" opacity="0.9">ARQUITECTURA DEL SISTEMA</text>
+  <line x1="200" y1="42" x2="700" y2="42" stroke="#6B4423" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ══ COLUMN 1 — CLIENTS ══ -->
+  <rect x="30" y="58" width="200" height="262" rx="10" fill="url(#col-grad)" stroke="#A0785A" stroke-width="0.8" opacity="0.7"/>
+  <text x="130" y="80" font-family="Georgia,serif" font-size="12" font-weight="700"
+    text-anchor="middle" fill="#E8C9A0" letter-spacing="2">📱 CLIENTES</text>
+
+  <!-- Web App -->
+  <rect x="44" y="94" width="172" height="50" rx="7" fill="#2A1F17" stroke="#A0785A" stroke-width="0.6" opacity="0.9"/>
+  <text x="130" y="114" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#E8DCC8">🌐 Web — Angular 21</text>
+  <text x="130" y="130" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">Tailwind · Capacitor · i18n</text>
+
+  <!-- Android App -->
+  <rect x="44" y="156" width="172" height="50" rx="7" fill="#2A1F17" stroke="#C8956C" stroke-width="0.6" opacity="0.9"/>
+  <text x="130" y="176" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#F5E6D0">🤖 Android — Kotlin</text>
+  <text x="130" y="192" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">Jetpack Compose · Room · Hilt</text>
+
+  <!-- Capacitor bridge -->
+  <rect x="44" y="218" width="172" height="38" rx="7" fill="#2A1F17" stroke="#8B6F47" stroke-width="0.5" opacity="0.7"/>
+  <text x="130" y="238" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.7">⚡ Capacitor 7 — bridge nativo</text>
+  <text x="130" y="250" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.5">Cámara · Storage · Deep links</text>
+
+  <!-- Firebase client -->
+  <rect x="44" y="268" width="172" height="38" rx="7" fill="#2C1810" stroke="#C8956C" stroke-width="0.6" opacity="0.85">
+    <animate attributeName="stroke-opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="130" y="288" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#E8C9A0">🔥 Firebase Auth + Storage</text>
+  <text x="130" y="300" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">JWT · Google OAuth · Fotos</text>
+
+  <!-- ══ COLUMN 2 — BACKEND ══ -->
+  <rect x="340" y="58" width="220" height="262" rx="10" fill="url(#col-grad)" stroke="#A0785A" stroke-width="0.8" opacity="0.7"/>
+  <text x="450" y="80" font-family="Georgia,serif" font-size="12" font-weight="700"
+    text-anchor="middle" fill="#E8C9A0" letter-spacing="2">⚡ BACKEND API</text>
+
+  <!-- Express -->
+  <rect x="356" y="94" width="188" height="50" rx="7" fill="#2A1F17" stroke="#A0785A" stroke-width="0.6" opacity="0.9"/>
+  <text x="450" y="114" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#E8DCC8">🚀 Express 5 + TypeScript</text>
+  <text x="450" y="130" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">Zod · Helmet · Rate limiting · Swagger</text>
+
+  <!-- Prisma ORM -->
+  <rect x="356" y="156" width="188" height="50" rx="7" fill="#2A1F17" stroke="#A0785A" stroke-width="0.6" opacity="0.9"/>
+  <text x="450" y="176" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#E8DCC8">🗄️ Prisma ORM</text>
+  <text x="450" y="192" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">PostgreSQL · Migraciones · Seeds</text>
+
+  <!-- Firebase Admin -->
+  <rect x="356" y="218" width="188" height="38" rx="7" fill="#2C1810" stroke="#C8956C" stroke-width="0.6" opacity="0.85"/>
+  <text x="450" y="238" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="500" text-anchor="middle" fill="#E8C9A0">🔐 Firebase Admin SDK</text>
+  <text x="450" y="250" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">Verificación tokens · Sync usuarios</text>
+
+  <!-- Stripe -->
+  <rect x="356" y="268" width="188" height="38" rx="7" fill="#201520" stroke="#9B7DB8" stroke-width="0.7" opacity="0.9">
+    <animate attributeName="stroke-opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="450" y="288" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#C4B0D9">💳 Stripe Checkout</text>
+  <text x="450" y="300" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#C4B0D9" opacity="0.6">Card · Link · PayPal · Webhooks</text>
+
+  <!-- ══ COLUMN 3 — DATA ══ -->
+  <rect x="670" y="58" width="200" height="262" rx="10" fill="url(#col-grad-amber)" stroke="#8B6F47" stroke-width="0.8" opacity="0.7"/>
+  <text x="770" y="80" font-family="Georgia,serif" font-size="12" font-weight="700"
+    text-anchor="middle" fill="#E8C9A0" letter-spacing="2">🏗️ DATOS</text>
+
+  <!-- PostgreSQL -->
+  <rect x="684" y="94" width="172" height="56" rx="7" fill="#2A1F17" stroke="#8B6F47" stroke-width="0.6" opacity="0.9"/>
+  <text x="770" y="114" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#F5E6D0">🐘 PostgreSQL (Supabase)</text>
+  <text x="770" y="130" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.7">Users · Books · Orders · Reviews</text>
+  <text x="770" y="142" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.5">Categorías · Relaciones N:M</text>
+
+  <!-- Firebase Storage -->
+  <rect x="684" y="162" width="172" height="44" rx="7" fill="#2C1810" stroke="#C8956C" stroke-width="0.6" opacity="0.85"/>
+  <text x="770" y="180" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="500" text-anchor="middle" fill="#E8C9A0">📦 Firebase Storage</text>
+  <text x="770" y="196" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">Avatares · Imágenes de libros</text>
+
+  <!-- Google Books API -->
+  <rect x="684" y="218" width="172" height="44" rx="7" fill="#2A1F17" stroke="#8B6F47" stroke-width="0.5" opacity="0.8"/>
+  <text x="770" y="236" font-family="'Segoe UI',sans-serif" font-size="10" font-weight="500" text-anchor="middle" fill="#F5E6D0">📡 Google Books API</text>
+  <text x="770" y="252" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.6">Seeding · ~1000 libros</text>
+
+  <!-- Room DB -->
+  <rect x="684" y="274" width="172" height="34" rx="7" fill="#2A1F17" stroke="#A0785A" stroke-width="0.5" opacity="0.7"/>
+  <text x="770" y="294" font-family="'Segoe UI',sans-serif" font-size="9" text-anchor="middle" fill="#D4B896" opacity="0.8">📱 Room (Android offline-first)</text>
+
+  <!-- ══ ANIMATED ARROWS ══ -->
+
+  <!-- Arrow: Clients → Backend (Web) -->
+  <line x1="230" y1="120" x2="356" y2="120" stroke="url(#arrow-grad)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <circle r="4" fill="#C8956C" opacity="0" filter="url(#glow)">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="0.2s">
+      <mpath href="#path-c-b"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+  </circle>
+  <path id="path-c-b" d="M230,120 L356,120" fill="none"/>
+
+  <!-- Arrow: Clients → Backend (Android) -->
+  <line x1="230" y1="180" x2="356" y2="180" stroke="url(#arrow-cream)" stroke-width="1.2" marker-end="url(#arr-cream)"/>
+  <circle r="3.5" fill="#D4B896" opacity="0" filter="url(#glow)">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="1s">
+      <mpath href="#path-c-b2"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <path id="path-c-b2" d="M230,180 L356,180" fill="none"/>
+
+  <!-- Arrow: Backend → Database -->
+  <line x1="544" y1="120" x2="684" y2="120" stroke="url(#arrow-grad)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <circle r="4" fill="#C8956C" opacity="0" filter="url(#glow)">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="1.2s">
+      <mpath href="#path-b-d"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+  </circle>
+  <path id="path-b-d" d="M544,120 L684,120" fill="none"/>
+
+  <!-- Arrow: Backend → Firebase Storage -->
+  <line x1="544" y1="240" x2="684" y2="184" stroke="#C8956C" stroke-width="1" marker-end="url(#arr)" stroke-dasharray="4,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="1s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Labels -->
+  <text x="290" y="112" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#C8956C" opacity="0.6">REST API</text>
+  <text x="290" y="172" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#D4B896" opacity="0.6">Retrofit</text>
+  <text x="614" y="112" font-family="'Segoe UI',sans-serif" font-size="8" text-anchor="middle" fill="#C8956C" opacity="0.6">Prisma Client</text>
+
+</svg>

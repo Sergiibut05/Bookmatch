@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <!-- Warm book palette -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1C1410"/>
+      <stop offset="35%"  stop-color="#2A1F17"/>
+      <stop offset="65%"  stop-color="#231A13"/>
+      <stop offset="100%" stop-color="#1C1410"/>
+    </linearGradient>
+    <linearGradient id="gold-h" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C1410"  stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#C8956C"  stop-opacity="1"/>
+      <stop offset="50%"  stop-color="#E8C9A0"  stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#C8956C"  stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1C1410"  stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C8956C"/>
+      <stop offset="30%"  stop-color="#E8C9A0"/>
+      <stop offset="50%"  stop-color="#F5E6D0"/>
+      <stop offset="70%"  stop-color="#E8C9A0"/>
+      <stop offset="100%" stop-color="#C8956C"/>
+    </linearGradient>
+    <linearGradient id="cream-sub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#A0785A"/>
+      <stop offset="50%"  stop-color="#D4B896"/>
+      <stop offset="100%" stop-color="#A0785A"/>
+    </linearGradient>
+    <radialGradient id="glow-warm" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#C8956C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C8956C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-cream" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#F5E6D0" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F5E6D0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="f-blur2"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="f-blur4"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="f-blur6"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="f-glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip-main">
+      <rect width="900" height="300" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect width="900" height="300" fill="url(#bg-grad)" rx="14"/>
+
+  <!-- ── Leather-style border ── -->
+  <rect x="3" y="3" width="894" height="294" fill="none" stroke="#6B4423" stroke-width="1" rx="12" opacity="0.5"/>
+  <rect width="900" height="300" fill="none" stroke="#C8956C" stroke-width="0.6" rx="14" opacity="0.25"/>
+
+  <!-- ── Classic corner ornaments ── -->
+  <!-- Top-left -->
+  <path d="M8,8 L50,8" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <path d="M8,8 L8,50" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="8" cy="8" r="2" fill="#C8956C" opacity="0.4"/>
+  <!-- Top-right -->
+  <path d="M892,8 L850,8" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <path d="M892,8 L892,50" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="892" cy="8" r="2" fill="#C8956C" opacity="0.4"/>
+  <!-- Bottom-left -->
+  <path d="M8,292 L50,292" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <path d="M8,292 L8,250" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="8" cy="292" r="2" fill="#C8956C" opacity="0.4"/>
+  <!-- Bottom-right -->
+  <path d="M892,292 L850,292" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <path d="M892,292 L892,250" fill="none" stroke="#C8956C" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="892" cy="292" r="2" fill="#C8956C" opacity="0.4"/>
+
+  <g clip-path="url(#clip-main)">
+
+    <!-- ── OPEN BOOK silhouette at center-bottom ── -->
+    <!-- Left page -->
+    <path d="M370,300 L370,195 Q370,185 380,183 Q420,178 448,178" fill="none" stroke="#6B4423" stroke-width="1.5" opacity="0.25"/>
+    <!-- Right page -->
+    <path d="M530,300 L530,195 Q530,185 520,183 Q480,178 452,178" fill="none" stroke="#6B4423" stroke-width="1.5" opacity="0.25"/>
+    <!-- Spine -->
+    <line x1="450" y1="178" x2="450" y2="300" stroke="#8B6F47" stroke-width="0.8" opacity="0.2"/>
+    <!-- Page lines left -->
+    <line x1="385" y1="200" x2="440" y2="198" stroke="#6B4423" stroke-width="0.4" opacity="0.12"/>
+    <line x1="385" y1="210" x2="440" y2="208" stroke="#6B4423" stroke-width="0.4" opacity="0.1"/>
+    <line x1="385" y1="220" x2="440" y2="218" stroke="#6B4423" stroke-width="0.4" opacity="0.08"/>
+    <line x1="385" y1="230" x2="440" y2="228" stroke="#6B4423" stroke-width="0.4" opacity="0.06"/>
+    <!-- Page lines right -->
+    <line x1="460" y1="198" x2="520" y2="200" stroke="#6B4423" stroke-width="0.4" opacity="0.12"/>
+    <line x1="460" y1="208" x2="520" y2="210" stroke="#6B4423" stroke-width="0.4" opacity="0.1"/>
+    <line x1="460" y1="218" x2="520" y2="220" stroke="#6B4423" stroke-width="0.4" opacity="0.08"/>
+    <line x1="460" y1="228" x2="520" y2="230" stroke="#6B4423" stroke-width="0.4" opacity="0.06"/>
+
+    <!-- ── FLOATING PAGES — cream/parchment colored ── -->
+    <!-- Page 1 -->
+    <g opacity="0">
+      <rect x="95" y="270" width="12" height="15" rx="1.5" fill="#E8DCC8" opacity="0.6"/>
+      <line x1="98" y1="274" x2="104" y2="274" stroke="#A0785A" stroke-width="0.4" opacity="0.5"/>
+      <line x1="98" y1="277" x2="103" y2="277" stroke="#A0785A" stroke-width="0.4" opacity="0.4"/>
+      <line x1="98" y1="280" x2="105" y2="280" stroke="#A0785A" stroke-width="0.4" opacity="0.3"/>
+      <animate attributeName="opacity" values="0;0.7;0;0.4;0" dur="9s" begin="0s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;8,-210;0,0" dur="9s" begin="0s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="-8 101 277;18 101 170;-8 101 277" dur="9s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Page 2 -->
+    <g opacity="0">
+      <rect x="220" y="280" width="10" height="13" rx="1" fill="#F5E6D0" opacity="0.5"/>
+      <line x1="223" y1="284" x2="228" y2="284" stroke="#C8956C" stroke-width="0.3" opacity="0.4"/>
+      <line x1="223" y1="287" x2="227" y2="287" stroke="#C8956C" stroke-width="0.3" opacity="0.3"/>
+      <animate attributeName="opacity" values="0;0.6;0;0.35;0" dur="11s" begin="1.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-5,-235;0,0" dur="11s" begin="1.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="5 225 286;-22 225 165;5 225 286" dur="11s" begin="1.5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Page 3 — large, slow, blurred -->
+    <g opacity="0" filter="url(#f-blur2)">
+      <rect x="340" y="275" width="14" height="18" rx="2" fill="#D4B896" opacity="0.4"/>
+      <animate attributeName="opacity" values="0;0.4;0;0.2;0" dur="14s" begin="0.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;12,-240;0,0" dur="14s" begin="0.8s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Page 4 -->
+    <g opacity="0">
+      <rect x="560" y="278" width="9" height="12" rx="1" fill="#E8DCC8" opacity="0.55"/>
+      <line x1="562" y1="282" x2="567" y2="282" stroke="#A0785A" stroke-width="0.3" opacity="0.4"/>
+      <animate attributeName="opacity" values="0;0.65;0;0.4;0" dur="10s" begin="2.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-6,-230;0,0" dur="10s" begin="2.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="10 564 284;-15 564 170;10 564 284" dur="10s" begin="2.5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Page 5 -->
+    <g opacity="0">
+      <rect x="680" y="272" width="11" height="14" rx="1.5" fill="#F5E6D0" opacity="0.5"/>
+      <animate attributeName="opacity" values="0;0.55;0;0.3;0" dur="8s" begin="1s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;6,-225;0,0" dur="8s" begin="1s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="-12 685 279;20 685 165;-12 685 279" dur="8s" begin="1s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Page 6 — tiny, fast -->
+    <g opacity="0">
+      <rect x="800" y="268" width="7" height="9" rx="1" fill="#D4B896" opacity="0.5"/>
+      <animate attributeName="opacity" values="0;0.7;0;0.45;0" dur="6.5s" begin="3.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;-3,-200;0,0" dur="6.5s" begin="3.5s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Page 7 — center, very slow -->
+    <g opacity="0" filter="url(#f-blur2)">
+      <rect x="445" y="285" width="13" height="16" rx="2" fill="#E8DCC8" opacity="0.35"/>
+      <animate attributeName="opacity" values="0;0.3;0;0.15;0" dur="16s" begin="1.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-250;0,0" dur="16s" begin="1.2s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- ── DUST MOTES — tiny warm particles ── -->
+    <circle cx="120" cy="80" r="1" fill="#E8DCC8" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="4s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;70;80" dur="4s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="120" r="0.8" fill="#C8956C" opacity="0">
+      <animate attributeName="opacity" values="0;0.4;0" dur="5s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;108;120" dur="5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="620" cy="90" r="1.2" fill="#F5E6D0" opacity="0">
+      <animate attributeName="opacity" values="0;0.45;0" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;78;90" dur="3.5s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="780" cy="110" r="0.9" fill="#D4B896" opacity="0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="110;98;110" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="60" r="1.1" fill="#E8DCC8" opacity="0">
+      <animate attributeName="opacity" values="0;0.35;0" dur="6s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="450;455;450" dur="6s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+
+  </g><!-- end clip -->
+
+  <!-- ── WARM HALO behind text ── -->
+  <ellipse cx="450" cy="110" rx="280" ry="75" fill="url(#glow-warm)" filter="url(#f-blur6)">
+    <animate attributeName="rx" values="280;310;280" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="450" cy="125" rx="160" ry="40" fill="url(#glow-cream)" filter="url(#f-blur6)">
+    <animate attributeName="rx" values="160;190;160" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ── Top/bottom gold lines ── -->
+  <line x1="60" y1="2" x2="840" y2="2" stroke="url(#gold-h)" stroke-width="1"/>
+  <line x1="60" y1="298" x2="840" y2="298" stroke="url(#gold-h)" stroke-width="1"/>
+
+  <!-- ── MAIN TEXT — shadow ── -->
+  <text x="450" y="105"
+    font-family="Georgia,'Times New Roman',serif" font-size="66" font-weight="700"
+    text-anchor="middle" fill="url(#text-grad)" opacity="0.12" filter="url(#f-blur6)"
+    letter-spacing="10">BOOKMATCH</text>
+
+  <!-- ── MAIN TEXT — sharp ── -->
+  <text x="450" y="105"
+    font-family="Georgia,'Times New Roman',serif" font-size="66" font-weight="700"
+    text-anchor="middle" fill="url(#text-grad)" letter-spacing="10" filter="url(#f-glow)">
+    BOOKMATCH
+    <animate attributeName="opacity" values="0;1" dur="1.6s" fill="freeze"/>
+  </text>
+
+  <!-- ── ORNAMENTAL LINE under title ── -->
+  <!-- Center diamond -->
+  <polygon points="446,130 450,125 454,130 450,135" fill="#C8956C" opacity="0">
+    <animate attributeName="opacity" values="0;0.6" dur="0.5s" begin="1.8s" fill="freeze"/>
+  </polygon>
+  <!-- Left line -->
+  <line x1="450" y1="130" x2="450" y2="130" stroke="#C8956C" stroke-width="0.8" opacity="0">
+    <animate attributeName="x1" values="450;290" dur="0.8s" begin="2s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;0.45" dur="0.4s" begin="2s" fill="freeze"/>
+  </line>
+  <!-- Right line -->
+  <line x1="450" y1="130" x2="450" y2="130" stroke="#C8956C" stroke-width="0.8" opacity="0">
+    <animate attributeName="x2" values="450;610" dur="0.8s" begin="2s" fill="freeze"/>
+    <animate attributeName="opacity" values="0;0.45" dur="0.4s" begin="2s" fill="freeze"/>
+  </line>
+  <!-- Left curl -->
+  <path d="M290,130 Q280,130 278,122 Q276,114 284,112" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0">
+    <animate attributeName="opacity" values="0;0.45" dur="0.4s" begin="2.6s" fill="freeze"/>
+  </path>
+  <!-- Right curl -->
+  <path d="M610,130 Q620,130 622,122 Q624,114 616,112" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0">
+    <animate attributeName="opacity" values="0;0.45" dur="0.4s" begin="2.6s" fill="freeze"/>
+  </path>
+
+  <!-- ── SUBTITLE ── -->
+  <text x="450" y="155"
+    font-family="Georgia,'Times New Roman',serif" font-size="14" font-weight="400" font-style="italic"
+    text-anchor="middle" fill="#D4B896" letter-spacing="4" opacity="0">
+    compra · vende · intercambia · descubre
+    <animate attributeName="opacity" values="0;0.75" dur="1.5s" begin="1s" fill="freeze"/>
+  </text>
+
+  <!-- ── TAGLINE ── -->
+  <text x="450" y="178"
+    font-family="Georgia,'Times New Roman',serif" font-size="12" font-weight="300"
+    text-anchor="middle" fill="url(#cream-sub)" letter-spacing="3" opacity="0">
+    Tu próximo libro te está buscando
+    <animate attributeName="opacity" values="0;0.6" dur="1.2s" begin="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- ── Book silhouettes (SVG, no emoji) ── -->
+  <!-- Left open book -->
+  <g opacity="0">
+    <path d="M185,90 L185,110 Q185,112 187,112 Q195,111 200,110" fill="none" stroke="#C8956C" stroke-width="1" opacity="0.5"/>
+    <path d="M215,90 L215,110 Q215,112 213,112 Q205,111 200,110" fill="none" stroke="#C8956C" stroke-width="1" opacity="0.5"/>
+    <line x1="200" y1="88" x2="200" y2="112" stroke="#A0785A" stroke-width="0.5" opacity="0.35"/>
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="2.2s" fill="freeze"/>
+  </g>
+  <!-- Right book pair -->
+  <g opacity="0">
+    <rect x="688" y="89" width="8" height="22" rx="1" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0.4" transform="rotate(-6 692 100)"/>
+    <rect x="697" y="88" width="8" height="23" rx="1" fill="none" stroke="#D4B896" stroke-width="0.8" opacity="0.35"/>
+    <rect x="707" y="89" width="8" height="22" rx="1" fill="none" stroke="#A0785A" stroke-width="0.8" opacity="0.3" transform="rotate(5 711 100)"/>
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="2.4s" fill="freeze"/>
+  </g>
+
+  <!-- ── TECH ROW at bottom ── -->
+  <text x="290" y="248"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="500"
+    text-anchor="middle" fill="#C8956C" opacity="0" letter-spacing="1">
+    Angular 21
+    <animate attributeName="opacity" values="0;0.5" dur="0.6s" begin="3s" fill="freeze"/>
+  </text>
+  <circle cx="340" cy="246" r="1.5" fill="#8B6F47" opacity="0">
+    <animate attributeName="opacity" values="0;0.3" dur="0.4s" begin="3.1s" fill="freeze"/>
+  </circle>
+  <text x="390" y="248"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="500"
+    text-anchor="middle" fill="#D4B896" opacity="0" letter-spacing="1">
+    Kotlin
+    <animate attributeName="opacity" values="0;0.5" dur="0.6s" begin="3.2s" fill="freeze"/>
+  </text>
+  <circle cx="430" cy="246" r="1.5" fill="#8B6F47" opacity="0">
+    <animate attributeName="opacity" values="0;0.3" dur="0.4s" begin="3.3s" fill="freeze"/>
+  </circle>
+  <text x="470" y="248"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="500"
+    text-anchor="middle" fill="#C8956C" opacity="0" letter-spacing="1">
+    Express 5
+    <animate attributeName="opacity" values="0;0.5" dur="0.6s" begin="3.4s" fill="freeze"/>
+  </text>
+  <circle cx="518" cy="246" r="1.5" fill="#8B6F47" opacity="0">
+    <animate attributeName="opacity" values="0;0.3" dur="0.4s" begin="3.5s" fill="freeze"/>
+  </circle>
+  <text x="560" y="248"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="500"
+    text-anchor="middle" fill="#D4B896" opacity="0" letter-spacing="1">
+    Firebase
+    <animate attributeName="opacity" values="0;0.5" dur="0.6s" begin="3.6s" fill="freeze"/>
+  </text>
+  <circle cx="605" cy="246" r="1.5" fill="#8B6F47" opacity="0">
+    <animate attributeName="opacity" values="0;0.3" dur="0.4s" begin="3.7s" fill="freeze"/>
+  </circle>
+  <text x="645" y="248"
+    font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="500"
+    text-anchor="middle" fill="#C8956C" opacity="0" letter-spacing="1">
+    Stripe
+    <animate attributeName="opacity" values="0;0.5" dur="0.6s" begin="3.8s" fill="freeze"/>
+  </text>
+
+</svg>

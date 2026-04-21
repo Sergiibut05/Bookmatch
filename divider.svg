@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="900" height="40">
+  <defs>
+    <linearGradient id="ln-g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C1410"  stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#A0785A"  stop-opacity="0.6"/>
+      <stop offset="50%"  stop-color="#C8956C"  stop-opacity="0.8"/>
+      <stop offset="85%"  stop-color="#A0785A"  stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1C1410"  stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left flourish -->
+  <path d="M300,20 Q330,8 360,20 Q330,32 300,20" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M260,20 Q290,12 320,20" fill="none" stroke="#A0785A" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Right flourish -->
+  <path d="M600,20 Q570,8 540,20 Q570,32 600,20" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M640,20 Q610,12 580,20" fill="none" stroke="#A0785A" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Left line -->
+  <line x1="30" y1="20" x2="290" y2="20" stroke="url(#ln-g)" stroke-width="0.8"/>
+  <!-- Right line -->
+  <line x1="610" y1="20" x2="870" y2="20" stroke="url(#ln-g)" stroke-width="0.8"/>
+
+  <!-- Center ornament — open book icon -->
+  <!-- Book left page -->
+  <path d="M438,12 L438,28 Q438,30 440,30 Q448,29 450,28" fill="none" stroke="#C8956C" stroke-width="1" opacity="0.7"/>
+  <!-- Book right page -->
+  <path d="M462,12 L462,28 Q462,30 460,30 Q452,29 450,28" fill="none" stroke="#C8956C" stroke-width="1" opacity="0.7"/>
+  <!-- Book spine -->
+  <line x1="450" y1="10" x2="450" y2="30" stroke="#D4B896" stroke-width="0.6" opacity="0.5"/>
+  <!-- Book top -->
+  <path d="M438,12 Q444,10 450,10 Q456,10 462,12" fill="none" stroke="#C8956C" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Gentle pulsing glow on center book -->
+  <circle cx="450" cy="20" r="12" fill="#C8956C" opacity="0">
+    <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.08;0.02;0.08" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Small dots on the lines -->
+  <circle cx="180" cy="20" r="1.5" fill="#A0785A" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" begin="0.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="20" r="1.5" fill="#A0785A" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="20" r="1" fill="#C8956C" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="20" r="1" fill="#C8956C" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2.5s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

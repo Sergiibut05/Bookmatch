@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" width="1440" height="60" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="wt1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C1410" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#A0785A"/>
+      <stop offset="50%"  stop-color="#C8956C"/>
+      <stop offset="75%"  stop-color="#A0785A"/>
+      <stop offset="100%" stop-color="#1C1410" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wt2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C1410" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#D4B896" stop-opacity="0.35"/>
+      <stop offset="50%"  stop-color="#E8DCC8" stop-opacity="0.5"/>
+      <stop offset="70%"  stop-color="#D4B896" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1C1410" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="60" fill="#1C1410"/>
+
+  <!-- Slow wave 1 -->
+  <path fill="none" stroke="url(#wt1)" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite"
+      values="
+        M0,30 C120,14 240,46 360,30 C480,14 600,46 720,30 C840,14 960,46 1080,30 C1200,14 1320,46 1440,30;
+        M0,30 C120,46 240,14 360,30 C480,46 600,14 720,30 C840,46 960,14 1080,30 C1200,46 1320,14 1440,30;
+        M0,30 C120,14 240,46 360,30 C480,14 600,46 720,30 C840,14 960,46 1080,30 C1200,14 1320,46 1440,30"/>
+  </path>
+
+  <!-- Medium wave 2 -->
+  <path fill="none" stroke="url(#wt2)" stroke-width="1" opacity="0.4">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite"
+      values="
+        M0,30 C180,18 360,42 540,30 C720,18 900,42 1080,30 C1260,18 1440,42 1440,30;
+        M0,30 C180,42 360,18 540,30 C720,42 900,18 1080,30 C1260,42 1440,18 1440,30;
+        M0,30 C180,18 360,42 540,30 C720,18 900,42 1080,30 C1260,18 1440,42 1440,30"/>
+  </path>
+
+  <!-- Thin fast wave 3 -->
+  <path fill="none" stroke="#E8DCC8" stroke-width="0.6" opacity="0.2">
+    <animate attributeName="d" dur="3.5s" repeatCount="indefinite"
+      values="
+        M0,30 C90,22 180,38 270,30 C360,22 450,38 540,30 C630,22 720,38 810,30 C900,22 990,38 1080,30 C1170,22 1260,38 1350,30 L1440,30;
+        M0,30 C90,38 180,22 270,30 C360,38 450,22 540,30 C630,38 720,22 810,30 C900,38 990,22 1080,30 C1170,38 1260,22 1350,30 L1440,30;
+        M0,30 C90,22 180,38 270,30 C360,22 450,38 540,30 C630,22 720,38 810,30 C900,22 990,38 1080,30 C1170,22 1260,38 1350,30 L1440,30"/>
+  </path>
+
+  <!-- Traveling warm spark -->
+  <circle r="2.5" fill="#E8DCC8" opacity="0">
+    <animate attributeName="cx" values="0;1440" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="30;26;34;28;32;30" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.6;0.7;0.6;0" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Second spark gold -->
+  <circle r="2" fill="#C8956C" opacity="0">
+    <animate attributeName="cx" values="0;1440" dur="6s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="30;34;26;31;29;30" dur="6s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.5;0.55;0.5;0" dur="6s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
